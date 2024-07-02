@@ -3,7 +3,15 @@
 		<div class="col">
 			<h1>Listado de personas</h1>
 			<button class="btn btn-primary" [disabled]="deshabilitar" (click) ='agregarPersona()'>Agregar Persona</button>
-			<p>{{mensaje}}</p>
+			<br><br>
+			<button class="btn btn-primary" (click) ='disable()'>disable</button>
+			<button type="button"(click)="cambiar()" class="btn btn-primary ms-2">Cambiar</button>
+			@if (mostrar) {
+				<p>{{mensaje}} true</p>
+			}
+			@else {
+				<p>{{mensaje}} false</p>
+			}
 			<app-persona></app-persona>
 			<label for="">Titulo Persona</label>
 			<input type="text" class="form-control" [(ngModel)]="titulon">

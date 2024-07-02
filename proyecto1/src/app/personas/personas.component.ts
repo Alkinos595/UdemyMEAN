@@ -11,10 +11,23 @@ import { FormsModule } from '@angular/forms';
 })
 export class PersonasComponent {
 	deshabilitar: boolean = false;
-	mensaje: string = 'no se ha agregar gente';
+	mostrar: Boolean = false;
+	mensaje: string = 'No hay gente agregada, esto es: 		';
 	titulon: string = 'inge mamalo';
 	agregarPersona() {
 		this.mensaje = "persona agregada";
+	}
+	cambiar(){
+		if(this.mostrar == false)
+			this.mostrar = true
+		else
+			this.mostrar = false
+	}
+	disable(){
+		if(this.deshabilitar == false)
+			this.deshabilitar = true
+		else
+			this.deshabilitar = false
 	}
 /* 	modificarTitulo(event: Event){
 		this.titulo = (<HTMLInputElement>event.target).value;
